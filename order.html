@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Order Food | Mom's Kitchen</title>
+
+    <link rel="stylesheet" href="kitchen.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <div class="logo">Mom's Kitchen</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order Food</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- FOOD CATEGORIES -->
+
+    <section class="menu">
+
+        <h1 class="order-title">
+            Place Your Order
+        </h1>
+
+        <p class="order-description">
+            Select a food category to continue.
+        </p>
+
+        <div class="food-container">
+
+            <button class="category-card"
+                    type="button"
+                    onclick="selectCategory('Frozen Food')">
+
+                <img src="frozen.jpg"
+                     alt="Frozen Food">
+
+                <h2>Frozen Food</h2>
+
+                <p>Customize your frozen food order.</p>
+
+            </button>
+
+
+            <button class="category-card"
+                    type="button"
+                    onclick="selectCategory('Pudding & Watalappan')">
+
+                <img src="pudding.jpg"
+                     alt="Pudding and Watalappan">
+
+                <h2>Pudding & Watalappan</h2>
+
+                <p>Choose your favorite dessert.</p>
+
+            </button>
+
+
+            <button class="category-card"
+                    type="button"
+                    onclick="selectCategory('Awurudu Kema')">
+
+                <img src="awurudu.jpg"
+                     alt="Awurudu Kema">
+
+                <h2>Awurudu Kema</h2>
+
+                <p>Customize your traditional sweets.</p>
+
+            </button>
+
+
+            <button class="category-card"
+                    type="button"
+                    onclick="selectCategory('Rolls & Pastries')">
+
+                <img src="pastries.jpg"
+                     alt="Rolls and Pastries">
+
+                <h2>Rolls & Pastries</h2>
+
+                <p>Choose cutlets, rolls or pastries.</p>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ORDER FORM -->
+
+    <section class="order-section"
+             id="orderSection"
+             hidden>
+
+        <div class="order-form">
+
+            <h2>Customize Your Order</h2>
+
+            <form id="foodOrderForm">
+
+                <!-- PRIMARY CATEGORY -->
+
+                <div class="form-group">
+
+                    <label for="primaryCategory">
+                        Primary Category
+                    </label>
+
+                    <select id="primaryCategory"
+                            disabled>
+                    </select>
+
+                </div>
+
+
+                <!-- SECONDARY CATEGORY -->
+
+                <div class="form-group"
+                     id="secondaryGroup">
+
+                    <label for="secondaryCategory">
+                        Select Food Item
+                    </label>
+
+                    <select id="secondaryCategory"
+                            name="foodItem">
+
+                        <option value="">
+                            Select an item
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CUSTOM FOOD LIST -->
+
+                <div class="form-group"
+                     id="customGroup"
+                     hidden>
+
+                    <label for="customFood">
+                        Enter Your Food List
+                    </label>
+
+                    <textarea id="customFood"
+                              name="customFood"
+                              rows="5"
+                              placeholder="Enter your food items and quantities..."></textarea>
+
+                </div>
+
+
+                <!-- QUANTITY -->
+
+                <div class="form-group"
+                     id="quantityGroup">
+
+                    <label for="quantity">
+                        Quantity
+                    </label>
+
+                    <input type="number"
+                           id="quantity"
+                           name="quantity"
+                           min="1"
+                           value="1">
+
+                </div>
+
+
+                <!-- CUSTOMER NAME -->
+
+                <div class="form-group">
+
+                    <label for="customerName">
+                        Your Name
+                    </label>
+
+                    <input type="text"
+                           id="customerName"
+                           name="customerName"
+                           placeholder="Enter your name"
+                           required>
+
+                </div>
+
+
+                <!-- CUSTOMER PHONE -->
+
+                <div class="form-group">
+
+                    <label for="customerPhone">
+                        Phone Number
+                    </label>
+
+                    <input type="tel"
+                           id="customerPhone"
+                           name="customerPhone"
+                           placeholder="Enter your phone number"
+                           required>
+
+                </div>
+
+
+                <button type="submit"
+                        class="button submit-order">
+                    Prepare WhatsApp Order
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>
+            &copy; 2026 Mom's Kitchen.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+
+    <script src="kitchen.js"></script>
+
+</body>
+</html>
